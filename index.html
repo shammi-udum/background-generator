@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradient Backgroung</title><!--  Title of webpage -->
+	<link rel="stylesheet" type="text/css" href="style.css"> <!-- we linked our style css sheet andrei provided, look at css file to see notes on what andrei did to make css backround. -->
+</head>
+<body id="gradient">
+	<!-- weve added an Id called gradient to our body tag so that we could access it in our JavaScript file. -->
+	<h1>Background Generator</h1>
+	<input class="color1" type="color" name="color1" value="#00ff00"> 
+	<!-- Instead of using the event listener in the script file which is typically recommended, we could've also within the input tag added a onclick attribute or a oninput attribute were we could've said this onclick="setGradient()" or   
+	 oninput="setGradient()" but again the issue with this is were putting javascript in html which conflicts with seperation of concerns this also causes another issue too were this input can only have one attribute vs in java script you can keep adding different functions, events which is alot more extensible. -->
+	<input class="color2" type="color" name="color2" value="#ff0000"> 
+	<!--  This will be our color picker for html type, the hex code andrei gave me was random to get this started. Also we wanna have two color pickers because thats how gradients work thats why input has 2 rows. We also renamed the second inputs name to color 2. -->
+	<!-- In order to select the colors we need to give them a class to access them in javascript, so thats why added class color 1 and 2 to both of the input tags. -->
+	<h2>Current CSS Background</h2> <!-- CSS3 has these cool radient backrounds we can use -->
+	<h3></h3>
+	<script type="text/javascript" src="script.js"></script> <!-- linking JavaScript file --> 
+</body>
+</html>
+
+<!-- overall we want Javascript to read from the DOM and can affect it, we want it to read what the value, what the colors are of both inputs and we wanna put out a piece of text of the bottom of the page with those values in the CSS format. Based on what we have it looks like were gonna have to select 2 inputs and also select the h3 tag element so that we can enter some text here. Look at script file for further steps notes. -->
